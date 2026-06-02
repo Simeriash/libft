@@ -6,7 +6,7 @@
 /*   By: julauren <julauren@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:33:42 by julauren          #+#    #+#             */
-/*   Updated: 2026/05/08 10:17:18 by julauren         ###   ########.fr       */
+/*   Updated: 2026/06/02 11:22:42 by julauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,18 +54,18 @@ char	*ft_substr(const char *str, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *str, const char *set);
 char	**ft_split(const char *str, char c);
-char	*ft_itoa(int n);
+char	*ft_itoa(long n);
 char	*ft_strmapi(const char *src, char (*f)(unsigned int, char));
 void	ft_striteri(char *str, void (*f)(unsigned int, char*));
-int		ft_putchar_fd(char c, int fd);
-ssize_t	ft_putstr_fd(char *str, int fd);
-ssize_t	ft_putendl_fd(char *str, int fd);
-void	ft_putnbr_fd(int n, int fd);
 char	*ft_read_file(char *str);
 
 /*===============PRINTF==============*/
 
-int		ft_printf(const char *str, ...);
+int		ft_printf_fd(int fd, const char *str, ...);
+int		ft_putchar_fd(char c, int fd);
+ssize_t	ft_putstr_fd(char *str, int fd);
+ssize_t	ft_putendl_fd(char *str, int fd);
+ssize_t	ft_putnbr_fd(long n, int fd);
 int		ft_putnbr(long nbr, int base, int p, int lc);
 
 #endif
