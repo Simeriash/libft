@@ -6,11 +6,15 @@
 /*   By: julauren <julauren@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 13:43:47 by julauren          #+#    #+#             */
-/*   Updated: 2026/02/14 13:50:50 by julauren         ###   ########.fr       */
+/*   Updated: 2026/06/30 15:37:07 by julauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 50
+#endif
 
 static void	ft_free(char *buffer, char **readed_file, int fd)
 {
@@ -18,8 +22,8 @@ static void	ft_free(char *buffer, char **readed_file, int fd)
 		free(buffer);
 	if (*readed_file)
 	{
-		free(readed_file);
-		readed_file = NULL;
+		free(*readed_file);
+		*readed_file = NULL;
 	}
 	if (fd >= 0)
 		close(fd);
