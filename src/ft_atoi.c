@@ -6,18 +6,20 @@
 /*   By: julauren <julauren@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 07:20:56 by julauren          #+#    #+#             */
-/*   Updated: 2026/02/06 13:59:45 by julauren         ###   ########.fr       */
+/*   Updated: 2026/07/09 13:19:22 by julauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_atoi(const char *str, int *ctrl)
+int	ft_atoi(char *str, int *nbr)
 {
 	int		i;
 	long	num;
 	int		sign;
 
+	if (!str)
+		return (1);
 	i = 0;
 	num = 0;
 	sign = 1;
@@ -29,12 +31,9 @@ int	ft_atoi(const char *str, int *ctrl)
 	{
 		num = num * 10 + str[i] - 48;
 		if ((num > INT_MAX && sign == 1) || (((num * sign) < INT_MIN)))
-		{
-			num = 0;
-			*ctrl = 1;
-			break ;
-		}
+			return (1);
 		i++;
 	}
-	return (sign * num);
+	*nbr = num;
+	return (0);
 }
