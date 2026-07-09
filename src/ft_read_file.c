@@ -6,7 +6,7 @@
 /*   By: julauren <julauren@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 13:43:47 by julauren          #+#    #+#             */
-/*   Updated: 2026/06/30 15:37:07 by julauren         ###   ########.fr       */
+/*   Updated: 2026/07/09 17:41:59 by julauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	*ft_read_file(char *str)
 	fd = open(str, O_RDONLY);
 	if (fd == -1)
 	{
-		ft_free(buffer, NULL, -1);
+		ft_free(buffer, &readed_file, -1);
 		return (NULL);
 	}
 	ft_fill_file(buffer, &readed_file, fd);
