@@ -6,13 +6,13 @@
 /*   By: julauren <julauren@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 14:07:06 by julauren          #+#    #+#             */
-/*   Updated: 2025/12/17 16:23:13 by julauren         ###   ########.fr       */
+/*   Updated: 2026/07/09 10:43:11 by julauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static int	ft_count_str(const char *str, char c)
+static int	ft_count_str(char *str, char c)
 {
 	int	i;
 	int	count;
@@ -45,7 +45,7 @@ static void	ft_free_tab(char **tab, int n)
 	free(tab);
 }
 
-static char	**ft_tab(const char *str, char c, char **tab, int nb_str)
+static char	**ft_tab(char *str, char c, char **tab, int nb_str)
 {
 	int	i;
 	int	start;
@@ -72,7 +72,7 @@ static char	**ft_tab(const char *str, char c, char **tab, int nb_str)
 	return (tab);
 }
 
-char	**ft_split(const char *str, char c)
+char	**ft_split(char *str, char c)
 {
 	int		nb_str;
 	char	**tab;

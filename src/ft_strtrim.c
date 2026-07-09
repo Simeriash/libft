@@ -6,13 +6,13 @@
 /*   By: julauren <julauren@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 12:16:25 by julauren          #+#    #+#             */
-/*   Updated: 2025/12/17 16:21:38 by julauren         ###   ########.fr       */
+/*   Updated: 2026/07/09 10:38:19 by julauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char	*ft_strtrim(const char *str, const char *set)
+char	*ft_strtrim(char *str, char *set)
 {
 	size_t	start;
 	size_t	len;
