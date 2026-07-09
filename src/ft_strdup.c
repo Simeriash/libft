@@ -6,7 +6,7 @@
 /*   By: julauren <julauren@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 09:30:34 by julauren          #+#    #+#             */
-/*   Updated: 2025/12/17 16:19:18 by julauren         ###   ########.fr       */
+/*   Updated: 2026/07/09 10:17:37 by julauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strdup(const char *str)
 	int		i;
 	char	*dest;
 
+	if (!str)
+		return (NULL);
 	dest = malloc(sizeof (*dest) * (ft_strlen(str) + 1));
 	if (!dest)
 		return (NULL);

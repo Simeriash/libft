@@ -6,13 +6,13 @@
 /*   By: julauren <julauren@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:43:32 by julauren          #+#    #+#             */
-/*   Updated: 2026/03/28 17:46:44 by julauren         ###   ########.fr       */
+/*   Updated: 2026/07/09 10:31:24 by julauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
 	size_t	dlen;
 	size_t	slen;

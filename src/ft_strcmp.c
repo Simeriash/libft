@@ -6,13 +6,13 @@
 /*   By: julauren <julauren@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 10:14:49 by julauren          #+#    #+#             */
-/*   Updated: 2026/06/30 17:29:56 by julauren         ###   ########.fr       */
+/*   Updated: 2026/07/09 10:14:41 by julauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
 	size_t	i;
 
